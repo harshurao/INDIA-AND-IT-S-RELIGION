@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India and Its Regions</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Full-screen background video */
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Dark overlay for readability */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Adjust transparency */
+            z-index: 0;
+        }
+
+        /* Fixed icons on the side */
+        .fixed {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: 999;
+        }
+
+        .fixed a {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .fixed img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Navigation bar */
+        .fixednav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .navbar .nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar .nav ul li {
+            margin: 0 20px;
+        }
+
+        .navbar .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Box section with content */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            color: white;
+            z-index: 1;
+            position: relative;
+        }
+
+        .india {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .lets, .signin {
+            margin-top: 20px;
+            font-size: 25px;
+        }
+
+        .lets a, .signin a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Section for 'Let's Start' page */
+        #lets {
+            padding: 50px 0;
+            color: white;
+        }
+
+        .indiaz {
+            font-size: 50px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-box {
+            position: relative;
+            width: 300px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .hover-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+        }
+
+        .hover-text h3 {
+            font-size: 24px;
+        }
+
+        .hover-text p {
+            font-size: 16px;
+        }
+
+        .hover-text a {
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        /* Styling for the side circles (fixed side elements) */
+        .updes {
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidecirclered, .sidecircleblue, .sidecircleyellow,
+        .sidecirclered1, .sidecircleblue1, .sidecircleyellow1 {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .sidecirclered {
+            background-color: red;
+            top: 10%;
+            left: 10%;
+        }
+
+        .sidecircleblue {
+            background-color: blue;
+            top: 20%;
+            left: 15%;
+        }
+
+        .sidecircleyellow {
+            background-color: yellow;
+            top: 30%;
+            left: 20%;
+        }
+
+        .sidecirclered1 {
+            background-color: red;
+            top: 70%;
+            left: 70%;
+        }
+
+        .sidecircleblue1 {
+            background-color: blue;
+            top: 80%;
+            left: 75%;
+        }
+
+        .sidecircleyellow1 {
+            background-color: yellow;
+            top: 90%;
+            left: 80%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="Welcome to India ! [CINEMATIC TRAVEL FILM].mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark overlay (optional for readability) -->
+    <div class="overlay"></div>
+
+    <!-- Fixed side elements (circles and icons) -->
+    <div class="updes">
+        <div class="sidecirclered"></div>
+        <div class="sidecircleblue"></div>
+        <div class="sidecircleyellow"></div>
+    </div>
+    <div class="sidecirclered1"></div>
+    <div class="sidecircleblue1"></div>
+    <div class="sidecircleyellow1"></div>
+
+    <!-- Fixed social media icons -->
+    <div class="fixed">
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="login.html"><img src="linkedin (1).png" alt="LinkedIn"></a>
+        <a href="#"><img src="whatsapp.png" alt="WhatsApp"></a>
+        <a href="#"><img src="mail.png" alt="Mail"></a>
+    </div>
+
+    <!-- Fixed navigation bar -->
+    <div class="fixednav">
+        <nav class="navbar">
+            <div class="nav">
+                <ul>
+                    <li><div><a href="#">HOME</a></div></li>
+                    <li><div><a href="#zone">ZONAL WISE</a></div></li>
+                    <li><div><a href="#lets">SEE ALL</a></div></li>
+                    <li><div><a href="contact.html">CONTACT US</a></div></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main content area -->
+    <div class="box">
+        <div class="india">INDIA</div>
+        <div class="lets"><a href="#lets">LET'S START</a></div>
+        <div class="signin"><a href="#signupp">SIGN IN</a></div>
+    </div>
+
+    <!-- 'Let's Start' page section -->
+    <div id="lets">
+        <div class="indiaz">INDIA</div>
+
+        <div class="container">
+            <!-- Adventure Box -->
+            <div class="image-box" style="background-color: #CC944F;">
+                <img src="Adventure.jpg" alt="Adventure">
+                <div class="hover-text">
+                    <h3>ADVENTURE</h3>
+                    <p>India boasts diverse adventure destinations, from the majestic Himalayas for trekking and skiing to Rajasthan's deserts for camel safaris and hot air ballooning.</p>
+                    <a href="#a" class="know-more">Know More</a>
+                </div>
+            </div>
+
+            <!-- Nature Box -->
+            <div class="image-box" style="background-color: #B4575C;">
+                <img src="NATURE.webp" alt="Nature">
+                <div class="hover-text">
+                    <h3>NATURE</h3>
+                    <p>India boasts diverse natural landscapes, from the majestic Himalayas and serene beaches of Goa to lush forests, vibrant wildlife sanctuaries, and tranquil deserts.</p>
+                    <a href="#n" class="know-more">Know More</a>
+                </div>
+            </div>
+
+            <!-- Wildlife Box -->
+            <div class="image-box" style="background-color: #6B63C6;">
+                <img src="WILDLIFE.jpg" alt="Wildlife">
+                <div class="hover-text">
+                    <h3>WILDLIFE</h3>
+                    <p>India's wildlife places showcase diverse ecosystems, from dense forests and grasslands to wetlands and deserts, home to rich biodiversity and iconic species.</p>
+                    <a href="#w" class="know-more">Know More</a>
+                </div>
+            </div>
+
+            <!-- Heritage Box -->
+            <div class="image-box" style="background-color: #6396C6;">
+                <img src="HERITAGE.webp" alt="Heritage">
+                <div class="hover-text">
+                    <h3>HERITAGE</h3>
+                    <p>India's heritage places showcase diverse cultures, ancient architecture, and rich history, from the Taj Mahal to Jaipur's palaces, reflecting vibrant traditions.</p>
+                    <a href="#h" class="know-more">Know More</a>
+                </div>
+            </div>
+
+            <!-- Spiritual Box -->
+            <div class="image-box" style="background-color: #870DB1;">
+                <img src="SPIRITUAL.webp" alt="Spiritual">
+                <div class="hover-text">
+                    <h3>SPIRITUAL</h3>
+                    <p>India's spiritual places offer a rich tapestry of temples, ashrams, and pilgrimage sites, each embodying deep cultural heritage and divine tranquility.</p>
+                    <a href="#s" class="know-more">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIA AND ITS REGION</title>
+    <link rel="stylesheet" href="PROJ.CSS">
+</head>
+<body>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="Welcome to India ! [CINEMATIC TRAVEL FILM].mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="bookyour">
+        <a href="membership.html">Book Your Trip</a>
+        
+    </div>
+    
+    <div class="updes">
+    <div class="sidecirclered"></div>
+    <div class="sidecircleblue"></div>
+    <div class="sidecircleyellow"></div></div>
+    <div class="sidecirclered1"></div>
+    <div class="sidecircleblue1"></div>
+    <div class="sidecircleyellow1"></div>
+    <div class="fixed"> 
+        <a href="project.html"><img src="instagram.png" alt=""></a>
+        <a href="login.html"><img src="linkedin (1).png" alt=""></a>
+        <a href="#"><img src="whatsapp.png" alt=""></a>
+        <a href="#"><img src="mail.png" alt=""></a>
+    </div>
+<div class="fixednav">
+<nav class="navbar">
+    <div class="nav">
+        <UL>
+            <LI><DIV><a href="#">HOME</a></div></LI>
+            <LI><DIV #zone> <a href="zonalwise.html">ZONAL WISE</a> </DIV></LI>
+            <LI><DIV #see><a href="#lets">SEE ALL</a></DIV></LI>
+            <LI><DIV><a href="contact.html">CONTACT US</a></DIV></LI>
+        </UL></div>
+</nav>
+</div>
+
+<div class="box">
+    <div class="india">INDIA</div>
+    <div class="lets"><a href="#lets">LET'S START</div>
+    <div class="signin"><a href="signin.html">SIGN IN</a></div>
+</div>
+</div>
+<!-- <a href="test.html">test</a> -->
+
+<!-- lets start page in html -->
+
+</div>
+<div id="lets">
+    <!-- <br><br><br><br><br> -->
+    
+    <div class="indiaz">INDIA</div>
+
+    <br><br><br><br>
+<br>
+<br><br>
+        <div class="container">
+            <div class="image-box" bg-color="#CC944F">
+                <img src="Adventure.jpg" alt="Image 1">
+                <div class="hover-text">
+                    <h3>ADVENTURE</h3>
+                    <p>India boasts diverse adventure destinations, from the majestic Himalayas for trekking and skiing to Rajasthan's deserts for camel safaris and hot air ballooning.</p>
+                    <a href="adventure.html" class="know-more">Know More</a>
+                </div>
+            </div>
+            <div class="image-box" bg-color="#B4575C">
+                <img src="NATURE.webp" alt="Image 2">
+                <div class="hover-text">
+                    <h3>NATURE</h3>
+                    <p>India boasts diverse natural landscapes, from the majestic Himalayas and serene beaches of Goa to lush forests, vibrant wildlife sanctuaries, and tranquil deserts.</p>
+                    <a href="nature.html" class="know-more">Know More</a>
+                </div>
+            </div>
+            <div class="image-box" bg-color="#6B63C6">
+                <img src="WILDLIFE.jpg" alt="Image 3">
+                <div class="hover-text">
+                    <h3>WILDLIFE</h3>
+                    <P>
+                        India's wildlife places showcase diverse ecosystems, from dense forests and grasslands to wetlands and deserts, home to rich biodiversity and iconic species.</P>
+                    <a href="wildlife.html" class="know-more">Know More</a>
+                </div>
+            </div>
+            <div class="image-box" bg-color="#6396C6">
+                <img src="HERITAGE.webp" alt="Image 4">
+                <div class="hover-text">
+                    <h3>HERITAGE</h3>
+                    <p>India's heritage places showcase diverse cultures, ancient architecture, and rich history, from the Taj Mahal to Jaipur's palaces, reflecting vibrant traditions.</p>
+                    <a href="heritage.html" class="know-more">Know More</a>
+                </div>
+            </div>
+            <div class="image-box"  bg-color="#870DB1" >
+                <img src="SPIRITUAL.webp" alt="Image 5">
+                <div class="hover-text">
+                    <h3>SPIRITUAL</h3>
+                    <p>India's spiritual places offer a rich tapestry of temples, ashrams, and pilgrimage sites, each embodying deep cultural heritage and divine tranquility.</p>
+                    <a href="spiritul.html" class="know-more">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<br><br><br><br>
+<br><br><br><br>
+
+<div class="footer">
+    <h1>@2024</h1>
+    <script>
+        fetch('style.json')
+          .then(response => response.json())
+          .then(config => {
+            // Apply background video styles
+            const video = document.getElementById('backgroundVideo');
+            Object.assign(video.style, config.backgroundVideo);
+      
+            // Apply 'Book Your Trip' button styles
+            const bookYourTrip = document.querySelector('.bookyour a');
+            Object.assign(bookYourTrip.style, config.bookyour);
+      
+            // Apply navbar styles
+            const navbar = document.querySelector('.navbar');
+            Object.assign(navbar.style, config.navbar);
+      
+            const navbarLinks = navbar.querySelectorAll('a');
+            navbarLinks.forEach(link => {
+              Object.assign(link.style, config.navbarLink);
+              link.addEventListener('mouseover', () => (link.style.color = '#f90'));
+              link.addEventListener('mouseout', () => (link.style.color = '#fff'));
+            });
+      
+            // Apply footer styles
+            const footer = document.querySelector('.footer');
+            Object.assign(footer.style, config.footer);
+          })
+          .catch(error => console.error('Error loading styles:', error));
+      </script>
+      
+</body>
+</html>
